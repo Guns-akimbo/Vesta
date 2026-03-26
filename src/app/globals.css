@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+:root {
+  --font-display: 'DM Serif Display', serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  /* Core surfaces */
+  --bg: #F7F6F2;
+  --surface: #FFFFFF;
+  --surface-alt: #F2F0EC;
+
+  /* Text */
+  --ink: #1E1C18;
+  --text-secondary: #6B6860;
+  --text-tertiary: #A09E9B;
+
+  /* Borders */
+  --border: rgba(30, 28, 24, 0.1);
+  --border-med: rgba(30, 28, 24, 0.18);
+
+  /* Category: Expenses */
+  --expense: #D8563A;
+  --expense-soft: #FAEAE6;
+  --expense-mid: #F5C2B5;
+
+  /* Category: Savings */
+  --savings: #2A8C6E;
+  --savings-soft: #E3F4EF;
+  --savings-mid: #9FD9CA;
+
+  /* Category: Investments */
+  --invest: #4A63C8;
+  --invest-soft: #EAF0FF;
+  --invest-mid: #B5C5F5;
+
+  /* Category: Habits */
+  --habit: #C07A2A;
+  --habit-soft: #FEF4E3;
+  --habit-mid: #F2CC8A;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+::selection {
+  background: rgba(42, 140, 110, 0.2);
+  color: var(--ink);
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+.stagger-6 { animation-delay: 0.3s; }
+
+/* Shimmer loading */
+.shimmer {
+  background: linear-gradient(90deg, var(--surface-alt) 25%, var(--surface) 50%, var(--surface-alt) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+/* AI insights prose */
+.insight-prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+.insight-prose ul {
+  margin-left: 1rem;
+  list-style: none;
+}
+.insight-prose li {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 1rem;
+  position: relative;
+}
+.insight-prose li::before {
+  content: '\2014';
+  position: absolute;
+  left: 0;
+  color: var(--savings);
+  font-weight: 600;
+}
+.insight-prose strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 2px rgba(42, 140, 110, 0.12);
+}
+
+/* Number font feature for tabular digits */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

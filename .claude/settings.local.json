@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm 2>&1 | tail -20)",
+      "Bash(npx --yes create-next-app@14 . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack 2>&1 | tail -20)",
+      "Read(//private/tmp/**)",
+      "Bash(npx --yes create-next-app@14 habit-tracker --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(npm install:*)",
+      "Bash(command -v nvm)",
+      "Read(//Users/chukwuemerie/.nvm/versions/node/**)",
+      "Bash(brew list:*)",
+      "Bash(source ~/.nvm/nvm.sh 2>/dev/null && nvm ls 2>/dev/null; source ~/.zshrc 2>/dev/null && node -v 2>/dev/null)",
+      "Bash(source ~/.nvm/nvm.sh && nvm use 18 2>/dev/null || nvm use 20 2>/dev/null || nvm use node 2>/dev/null; node -v)",
+      "Bash(source ~/.nvm/nvm.sh && nvm use 20 && npx next build 2>&1 | tail -50)",
+      "Bash(source ~/.nvm/nvm.sh && nvm use 20 && rm -rf /Users/chukwuemerie/Desktop/app/.next && npx next build 2>&1 | tail -30)",
+      "WebFetch(domain:www.alphavantage.co)",
+      "WebFetch(domain:api.twelvedata.com)",
+      "WebFetch(domain:query1.finance.yahoo.com)",
+      "WebFetch(domain:www.afrixore.com)",
+      "WebFetch(domain:ngxgroup.com)"
+    ]
+  }
+}

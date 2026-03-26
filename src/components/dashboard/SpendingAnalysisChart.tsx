@@ -52,7 +52,7 @@ export function SpendingAnalysisChart({ expenses, totalSaved }: SpendingAnalysis
   const isUp = changePercent > 0;
 
   return (
-    <div className="rounded-2xl border border-border bg-white p-5 animate-fade-up">
+    <div className="rounded-2xl border border-border bg-white p-4 sm:p-5 animate-fade-up">
       <div className="flex items-center justify-between mb-1">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-xl bg-invest-soft flex items-center justify-center">
@@ -71,23 +71,23 @@ export function SpendingAnalysisChart({ expenses, totalSaved }: SpendingAnalysis
       </div>
 
       {/* Summary stats */}
-      <div className="flex gap-4 mb-4 mt-3">
-        <div>
-          <p className="text-[10px] font-medium text-tertiary uppercase tracking-wider">6-Mo Total</p>
-          <p className="text-base font-bold text-ink tabular-nums">{formatCurrency(totalSpent)}</p>
+      <div className="flex gap-3 sm:gap-4 mb-4 mt-3">
+        <div className="min-w-0">
+          <p className="text-[9px] sm:text-[10px] font-medium text-tertiary uppercase tracking-wider">6-Mo Total</p>
+          <p className="text-sm sm:text-base font-bold text-ink tabular-nums truncate">{formatCurrency(totalSpent)}</p>
         </div>
-        <div>
-          <p className="text-[10px] font-medium text-tertiary uppercase tracking-wider">Avg/Month</p>
-          <p className="text-base font-bold text-ink tabular-nums">{formatCurrency(avgMonthly)}</p>
+        <div className="min-w-0">
+          <p className="text-[9px] sm:text-[10px] font-medium text-tertiary uppercase tracking-wider">Avg/Month</p>
+          <p className="text-sm sm:text-base font-bold text-ink tabular-nums truncate">{formatCurrency(avgMonthly)}</p>
         </div>
-        <div>
-          <p className="text-[10px] font-medium text-tertiary uppercase tracking-wider">Saved</p>
-          <p className="text-base font-bold text-savings tabular-nums">{formatCurrency(totalSaved)}</p>
+        <div className="min-w-0">
+          <p className="text-[9px] sm:text-[10px] font-medium text-tertiary uppercase tracking-wider">Saved</p>
+          <p className="text-sm sm:text-base font-bold text-savings tabular-nums truncate">{formatCurrency(totalSaved)}</p>
         </div>
       </div>
 
       {/* Bar chart */}
-      <div className="flex items-end gap-2 h-32 mb-2">
+      <div className="flex items-end gap-1.5 sm:gap-2 h-24 sm:h-32 mb-2">
         {monthlyData.map((d, i) => {
           const height = maxSpent > 0 ? Math.max((d.spent / maxSpent) * 100, d.spent > 0 ? 6 : 2) : 2;
           const isCurrent = i === monthlyData.length - 1;

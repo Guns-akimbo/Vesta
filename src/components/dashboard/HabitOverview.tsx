@@ -14,7 +14,7 @@ export function HabitOverview({ habits, todayProgress, isCompleted, onToggle }: 
   const completedCount = habits.filter((h) => isCompleted(h.id)).length;
 
   return (
-    <div className="rounded-2xl border border-border bg-white p-5 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+    <div className="rounded-2xl border border-border bg-white p-4 sm:p-5 animate-fade-up" style={{ animationDelay: "0.1s" }}>
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-xl bg-habit-soft flex items-center justify-center">

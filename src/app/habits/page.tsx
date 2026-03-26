@@ -37,7 +37,7 @@ export default function HabitsPage() {
     <div className="space-y-5">
       <div className="flex items-center justify-between animate-fade-up">
         <div>
-          <h1 className="font-display text-3xl text-ink">Habits</h1>
+          <h1 className="font-display text-2xl sm:text-3xl text-ink">Habits</h1>
           <p className="text-sm text-secondary mt-1">Build better routines</p>
         </div>
         <Button onClick={() => setShowForm(true)}>+ Add</Button>

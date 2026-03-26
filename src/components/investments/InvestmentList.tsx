@@ -70,7 +70,7 @@ function InvestmentRow({ inv, onDelete, onUpdateValue }: { inv: Investment; onDe
       </button>
 
       {expanded && (
-        <div className="ml-13 mr-1 mb-2 rounded-xl bg-surface-alt border border-border px-4 py-3 animate-scale-in">
+        <div className="ml-2 sm:ml-13 mr-1 mb-2 rounded-xl bg-surface-alt border border-border px-3 sm:px-4 py-3 animate-scale-in">
           <div className="grid grid-cols-2 gap-y-2.5 gap-x-4 text-xs">
             <div>
               <p className="text-tertiary">Invested</p>

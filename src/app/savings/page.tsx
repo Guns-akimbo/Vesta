@@ -26,7 +26,7 @@ export default function SavingsPage() {
     <div className="space-y-5">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="font-display text-3xl text-ink">Savings</h1>
+          <h1 className="font-display text-2xl sm:text-3xl text-ink">Savings</h1>
           <p className="text-sm text-secondary mt-1">Reach your goals</p>
         </div>
         <Button onClick={() => setShowForm(true)}>+ New Goal</Button>

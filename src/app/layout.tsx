@@ -21,7 +21,7 @@ export default function RootLayout({
           <Sidebar />
           <MobileHeader />
           <main className="lg:pl-60 transition-all duration-200">
-            <div className="px-4 pt-4 pb-24 lg:px-8 lg:pt-6 lg:pb-8">
+            <div className="px-4 pt-16 pb-24 lg:px-8 lg:pt-6 lg:pb-8">
               {children}
             </div>
           </main>

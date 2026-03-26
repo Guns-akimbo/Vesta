@@ -63,7 +63,7 @@ export function AiInputBar({
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder='Try "spent 5k on lunch" or "completed morning run"'
+          placeholder='Try "spent 5k on lunch"'
           className="flex-1 rounded-xl border border-border bg-surface-alt px-4 py-2.5 text-sm text-ink placeholder:text-tertiary focus:border-savings/40 focus:outline-none transition-all duration-200"
         />
         <button

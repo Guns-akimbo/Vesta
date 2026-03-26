@@ -14,15 +14,15 @@ export function SummaryCards({ todayTotal, weekTotal, monthTotal }: SummaryCards
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid grid-cols-3 gap-2 sm:gap-3">
       {cards.map((card, i) => (
         <div
           key={card.label}
-          className={`animate-fade-up rounded-2xl border ${card.border} ${card.bg} p-4 transition-all duration-200 hover:-translate-y-0.5`}
+          className={`animate-fade-up rounded-2xl border ${card.border} ${card.bg} p-3 sm:p-4 transition-all duration-200 hover:-translate-y-0.5`}
           style={{ animationDelay: `${i * 0.08}s` }}
         >
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-secondary">{card.label}</p>
-          <p className="mt-1.5 text-xl font-bold tabular-nums text-ink">
+          <p className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-secondary">{card.label}</p>
+          <p className="mt-1.5 text-base sm:text-xl font-bold tabular-nums text-ink truncate">
             {formatCurrency(card.value)}
           </p>
         </div>

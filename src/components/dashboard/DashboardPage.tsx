@@ -51,7 +51,7 @@ export function DashboardPage() {
           <p className="text-xs font-medium text-tertiary tracking-wide">
             {new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}
           </p>
-          <h1 className="font-display text-3xl text-ink mt-1">
+          <h1 className="font-display text-2xl sm:text-3xl text-ink mt-1">
             Good {new Date().getHours() < 12 ? "morning" : new Date().getHours() < 17 ? "afternoon" : "evening"}
           </h1>
         </div>
@@ -79,22 +79,22 @@ export function DashboardPage() {
             pnlPercent={pnlPercent}
           />
         </div>
-        <div className="grid grid-cols-2 gap-3">
-          <div className="rounded-2xl bg-white border border-border p-4 animate-fade-up">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-expense/70">Today&apos;s Spend</p>
-            <p className="text-xl font-bold text-ink tabular-nums mt-1">{new Intl.NumberFormat("en-NG", { style: "currency", currency: "NGN", minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(todayTotal)}</p>
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
+          <div className="rounded-2xl bg-white border border-border p-3 sm:p-4 animate-fade-up">
+            <p className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-expense/70">Today&apos;s Spend</p>
+            <p className="text-base sm:text-xl font-bold text-ink tabular-nums mt-1 truncate">{new Intl.NumberFormat("en-NG", { style: "currency", currency: "NGN", minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(todayTotal)}</p>
           </div>
-          <div className="rounded-2xl bg-white border border-border p-4 animate-fade-up stagger-1">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-habit/70">Weekly Spend</p>
-            <p className="text-xl font-bold text-ink tabular-nums mt-1">{new Intl.NumberFormat("en-NG", { style: "currency", currency: "NGN", minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(weekTotal)}</p>
+          <div className="rounded-2xl bg-white border border-border p-3 sm:p-4 animate-fade-up stagger-1">
+            <p className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-habit/70">Weekly Spend</p>
+            <p className="text-base sm:text-xl font-bold text-ink tabular-nums mt-1 truncate">{new Intl.NumberFormat("en-NG", { style: "currency", currency: "NGN", minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(weekTotal)}</p>
           </div>
-          <div className="rounded-2xl bg-white border border-border p-4 animate-fade-up stagger-2">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-savings/70">Savings Rate</p>
-            <p className="text-xl font-bold text-ink tabular-nums mt-1">{overallProgress}%</p>
+          <div className="rounded-2xl bg-white border border-border p-3 sm:p-4 animate-fade-up stagger-2">
+            <p className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-savings/70">Savings Rate</p>
+            <p className="text-base sm:text-xl font-bold text-ink tabular-nums mt-1">{overallProgress}%</p>
           </div>
-          <div className="rounded-2xl bg-white border border-border p-4 animate-fade-up stagger-3">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-habit/70">Habit Streak</p>
-            <p className="text-xl font-bold text-ink tabular-nums mt-1">{todayProgress}%</p>
+          <div className="rounded-2xl bg-white border border-border p-3 sm:p-4 animate-fade-up stagger-3">
+            <p className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-habit/70">Habit Streak</p>
+            <p className="text-base sm:text-xl font-bold text-ink tabular-nums mt-1">{todayProgress}%</p>
             <p className="text-[10px] text-tertiary mt-0.5">today</p>
           </div>
         </div>

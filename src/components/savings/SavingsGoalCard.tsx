@@ -29,7 +29,7 @@ export function SavingsGoalCard({ goal, onAddFunds, onDelete }: SavingsGoalCardP
   };
 
   return (
-    <div className="rounded-2xl border border-border bg-white p-5 transition-all duration-200">
+    <div className="rounded-2xl border border-border bg-white p-4 sm:p-5 transition-all duration-200">
       <button onClick={() => setExpanded(!expanded)} className="w-full text-left">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-3">
@@ -51,11 +51,12 @@ export function SavingsGoalCard({ goal, onAddFunds, onDelete }: SavingsGoalCardP
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <div className="flex-1 h-2 rounded-full bg-surface-alt overflow-hidden">
             <div className={`h-full rounded-full transition-all duration-700 ${isComplete ? "bg-savings" : "bg-habit"}`} style={{ width: `${progress}%` }} />
           </div>
-          <span className="text-[11px] text-secondary tabular-nums shrink-0">{formatCurrency(goal.currentAmount)} / {formatCurrency(goal.targetAmount)}</span>
+          <span className="text-[10px] sm:text-[11px] text-secondary tabular-nums shrink-0 hidden sm:inline">{formatCurrency(goal.currentAmount)} / {formatCurrency(goal.targetAmount)}</span>
+          <span className="text-[10px] text-secondary tabular-nums shrink-0 sm:hidden">{formatCurrency(goal.currentAmount)}</span>
         </div>
       </button>
 

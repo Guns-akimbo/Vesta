@@ -30,7 +30,7 @@ export default function ExpensesPage() {
     <div className="space-y-5">
       <div className="flex items-center justify-between animate-fade-up">
         <div>
-          <h1 className="font-display text-3xl text-ink">Expenses</h1>
+          <h1 className="font-display text-2xl sm:text-3xl text-ink">Expenses</h1>
           <p className="text-sm text-secondary mt-1">Track your spending</p>
         </div>
         <Button onClick={() => setShowForm(true)}>+ Add</Button>
